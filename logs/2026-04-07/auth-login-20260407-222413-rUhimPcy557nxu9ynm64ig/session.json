@@ -1,0 +1,17 @@
+{
+  "command": "auth:login",
+  "module": "login",
+  "userId": "107434c4-7391-49b3-baf8-ebed56f63548",
+  "email": "",
+  "sessionId": "rUhimPcy557nxu9ynm64ig",
+  "apiKey": "",
+  "orgId": "",
+  "authenticationMethod": "",
+  "startTimestamp": "2026-04-07T16:54:13.585Z",
+  "MachineEnvironment": {
+    "nodeVersion": "v20.18.3",
+    "os": "win32",
+    "hostname": "ALT-LT-837",
+    "CLI_VERSION": "1.60.1"
+  }
+}

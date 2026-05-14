@@ -1,6 +1,7 @@
 import * as contentstack from 'contentstack';
 import * as Utils from '@contentstack/utils';
 import ContentstackLivePreview from '@contentstack/live-preview-utils';
+import { useEffect } from 'react';
 
 // Initialize Stack
 const Stack = contentstack.Stack({

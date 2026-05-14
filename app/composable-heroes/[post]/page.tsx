@@ -7,6 +7,13 @@ import { getComposableHeroSingleRes, metaData } from '@/helper';
 import { SuperHeroPosts } from '@/typescript/pages';
 import { onEntryChange } from '@/contentstack-sdk';
 
+export const setDataForChromeExtension = (data: { entryUid: string, contenttype: string, locale: string }) => {
+    if(typeof window !== 'undefined'){
+    window.document.body.setAttribute('data-pageref', data.entryUid)
+        window.document.body.setAttribute('data-contenttype', data.contenttype)
+        window.document.body.setAttribute('data-locale', data.locale)
+    }
+}
 export default function SuperHerosPost() {
    
     const entryUrl = usePathname();
@@ -17,11 +24,12 @@ export default function SuperHerosPost() {
             const entryRes = await getComposableHeroSingleRes(entryUrl);
             if (!entryRes) throw new Error('Status: ' + 404);
             setPost(entryRes);
+            console.log("entryRes",entryRes);
         } catch (error) {
             console.error(error);
         }
     }
-
+    setDataForChromeExtension({entryUid:getPost?.uid,contenttype:'character',locale:getPost?.locale||'en-us'})
     useEffect(() => {
         onEntryChange(() => fetchData());
     }, []);

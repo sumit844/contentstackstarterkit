@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@contentstack/live-preview-utils": "4.1.2",
+    "algoliasearch": "^4.27.0",
     "contentstack": "3.22.0",
     "html-react-parser": "5.2.10",
     "moment": "2.30.1",
